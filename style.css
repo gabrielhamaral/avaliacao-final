@@ -1,0 +1,327 @@
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-primaria: #4f46e5;
+    --cor-primaria-escura: #4338ca;
+    --cor-fundo: #f3f4f6;
+    --cor-branco: #ffffff;
+    --cor-texto: #1f2937;
+    --cor-texto-claro: #6b7280;
+    --cor-sucesso: #10b981;
+    --cor-erro: #ef4444;
+    --sombra-padrao: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   PÁGINA DE LOGIN
+========================================= */
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cor-primaria), #7c3aed);
+    padding: 20px;
+}
+
+.login-container {
+    background-color: var(--cor-branco);
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-padrao);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+.login-title {
+    color: var(--cor-texto);
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    color: var(--cor-texto-claro);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.campo-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.campo-form input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.btn-entrar {
+    margin-top: 8px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-entrar:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.mensagem-erro {
+    background-color: #fee2e2;
+    color: var(--cor-erro);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.login-dica {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--cor-texto-claro);
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+.dashboard-body {
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+.dashboard-header {
+    background-color: var(--cor-branco);
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra-padrao);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.dashboard-header-info h1 {
+    font-size: 1.4rem;
+    color: var(--cor-texto);
+}
+
+.dashboard-header-info p {
+    font-size: 0.9rem;
+    color: var(--cor-texto-claro);
+    margin-top: 4px;
+}
+
+.btn-logout {
+    background-color: var(--cor-erro);
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626;
+}
+
+.dashboard-container {
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* Cards de resumo */
+.resumo-tarefas {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card-resumo {
+    flex: 1;
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--sombra-padrao);
+}
+
+.card-resumo .numero {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.card-resumo .rotulo {
+    font-size: 0.85rem;
+    color: var(--cor-texto-claro);
+}
+
+/* Formulário de nova tarefa */
+.form-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.form-tarefa input[type="text"] {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.form-tarefa input[type="text"]:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.btn-adicionar {
+    padding: 12px 22px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+/* Lista de tarefas */
+.lista-tarefas ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-tarefa {
+    background-color: var(--cor-branco);
+    padding: 16px 18px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-padrao);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.item-tarefa.concluida {
+    border-left-color: var(--cor-sucesso);
+    opacity: 0.7;
+}
+
+.item-tarefa.concluida .texto-tarefa {
+    text-decoration: line-through;
+    color: var(--cor-texto-claro);
+}
+
+.texto-tarefa {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    word-break: break-word;
+}
+
+.acoes-tarefa {
+    display: flex;
+    gap: 8px;
+}
+
+.acoes-tarefa a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-concluir {
+    background-color: #d1fae5;
+    color: var(--cor-sucesso);
+}
+
+.btn-remover {
+    background-color: #fee2e2;
+    color: var(--cor-erro);
+}
+
+.acoes-tarefa a:hover {
+    opacity: 0.75;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-padrao);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+@media (max-width: 480px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resumo-tarefas {
+        flex-direction: column;
+    }
+
+    .form-tarefa {
+        flex-direction: column;
+    }
+
+    .item-tarefa {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
